@@ -30,15 +30,27 @@ See
 [coherence-application.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/resources/META-INF/coherence-application.xml)
 
 
-## Inject custom attribute in GAR MANIFEST file
+## Inject custom main attribute (Gar-Version) in GAR's MANIFEST file
 
-
-1. kubectl: create cluster
+- Edit the pom of the gar project
 ```
-gcloud container clusters create k8s-coherence-cluster --machine-type=g1-small --num-nodes=3 --no-enable-autoupgrade --zone northamerica-northeast1-a --project superb-reporter-256719
-```
-
-2. kubectl: login to cluster 
-```
-gcloud container clusters get-credentials k8s-coherence-cluster --zone northamerica-northeast1-a --project superb-reporter-256719 
+	<build>
+		<plugins>      
+      ...
+			<!-- inject in MANIFEST custom Gar-Version attribute -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Gar-Version>${project.version}</Gar-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+      ...
+		</plugins>
+	</build>
 ```

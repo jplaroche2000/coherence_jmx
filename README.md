@@ -1,11 +1,12 @@
 # Load a custom MBean to expose GAR version
-Coherence docker and kubernetes artifacts
-
+This project describes the different parts required to expose the verison of a GAR in Coherence MBeans
 
 ## Create the custom MBean
 
+Create a class and an inerface with a version getter/setter. see src\main\java\ca\kafeine\coherence\listener
 
 ## Create the GAR life cycle listener
+
 
 
 ## Declare the listener in coherence-application.xml

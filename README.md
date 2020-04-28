@@ -1,5 +1,5 @@
 # Load a custom MBean to expose GAR version
-This project describes the different parts required to expose the version of a GAR (set in the META-INF/MANIFEST.MF fileof the gar) in Coherence MBeans
+This project describes the different parts required to expose the version of a GAR (set in the META-INF/MANIFEST.MF file of the gar) in Coherence MBeans
 
 ## Create the custom MBean
 

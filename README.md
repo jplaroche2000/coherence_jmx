@@ -2,7 +2,16 @@
 Coherence docker and kubernetes artifacts
 
 
-## kubernetes on GCP
+## Create the custom MBean
+
+
+## Create the GAR life cycle listener
+
+
+## Declare the listener in coherence-application.xml
+
+## Inject custom attribute in GAR MANIFEST file
+
 
 1. kubectl: create cluster
 ```

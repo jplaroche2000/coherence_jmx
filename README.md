@@ -4,7 +4,7 @@ This project describes the different parts required to expose the version of a G
 ## Create the custom MBean
 
 Create a class and an interface with a getter/setter for a String version property.  
-These classes need to be deployed in the libs of the GAR.
+These classes need to be deployed in a jar in the lib folder of the GAR.
 
 [GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
 
@@ -14,12 +14,12 @@ These classes need to be deployed in the libs of the GAR.
 - To extract the Gar-Version manifest main attribute from the MANIFEST.MF file
 - To register the MBean
 
-This class need to be deployed in the libs of the GAR.
+This class needs to be deployed in a jar in the lib folder of the GAR.
 
 [LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)
 
 
-## Declare the listener in coherence-application.xml
+## Declare the listener in coherence-application.xml of the GAR project
 
 ```
   <application-lifecycle-listener>
@@ -32,7 +32,8 @@ See
 
 ## Inject custom main attribute (Gar-Version) in GAR's MANIFEST file
 
-- Edit the pom of the gar project
+- Edit the Maven pom.xml file of the GAR project
+
 ```
 	<build>
 		<plugins>      

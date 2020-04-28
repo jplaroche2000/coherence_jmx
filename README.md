@@ -54,3 +54,5 @@ See
 		</plugins>
 	</build>
 ```
+See 
+[pom.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/pom.xml)

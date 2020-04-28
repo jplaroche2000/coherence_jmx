@@ -57,3 +57,7 @@ See
 ```
 See 
 [pom.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/pom.xml)
+
+## Result
+
+![JConsole](https://www.somesite.com/somedirectory/someimage.png)

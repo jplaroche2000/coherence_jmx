@@ -60,4 +60,4 @@ See
 
 ## Result
 
-![JConsole](https://www.somesite.com/somedirectory/someimage.png)
+![JConsole](https://github.com/jplaroche2000/coherence_jmx/blob/master/version.png)

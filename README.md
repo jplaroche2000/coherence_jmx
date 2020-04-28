@@ -1,4 +1,4 @@
-# Coherence
+# Load a custom MBean to expose GAR version
 Coherence docker and kubernetes artifacts
 
 

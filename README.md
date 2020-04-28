@@ -13,6 +13,7 @@ These classes need to be deployed in the libs of the GAR.
 
 - To extract the Gar-Version manifest main attribute from the MANIFEST.MF file
 - To register the MBean
+
 This class need to be deployed in the libs of the GAR.
 
 [LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)

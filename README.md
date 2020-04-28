@@ -1,15 +1,58 @@
 # Load a custom MBean to expose GAR version
-Coherence docker and kubernetes artifacts
+This project describes the different parts required to expose the version of a GAR (set in the META-INF/MANIFEST.MF file of the gar) in Coherence MBeans
+
+## Create the custom MBean
+
+Create a class and an interface with a getter/setter for a String version property.  
+These classes need to be deployed in the libs of the GAR.
+
+[GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
 
 
-## kubernetes on GCP
+## Create the GAR life cycle listener
 
-1. kubectl: create cluster
-```
-gcloud container clusters create k8s-coherence-cluster --machine-type=g1-small --num-nodes=3 --no-enable-autoupgrade --zone northamerica-northeast1-a --project superb-reporter-256719
-```
+- To extract the Gar-Version manifest main attribute from the MANIFEST.MF file
+- To register the MBean
 
-2. kubectl: login to cluster 
+This class need to be deployed in the libs of the GAR.
+
+[LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)
+
+
+## Declare the listener in coherence-application.xml
+
 ```
-gcloud container clusters get-credentials k8s-coherence-cluster --zone northamerica-northeast1-a --project superb-reporter-256719 
+  <application-lifecycle-listener>
+        <class-name>ca.kafeine.coherence.listener.LifeCycleListener</class-name>
+  </application-lifecycle-listener>
 ```
+See 
+[coherence-application.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/resources/META-INF/coherence-application.xml)
+
+
+## Inject custom main attribute (Gar-Version) in GAR's MANIFEST file
+
+- Edit the pom of the gar project
+```
+	<build>
+		<plugins>      
+      ...
+			<!-- inject in MANIFEST custom Gar-Version attribute -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Gar-Version>${project.version}</Gar-Version>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+      ...
+		</plugins>
+	</build>
+```
+See 
+[pom.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/pom.xml)

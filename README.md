@@ -3,7 +3,9 @@ This project describes the different parts required to expose the version of a G
 
 ## Create the custom MBean
 
-Create a class and an interface with a getter/setter for a String version property.  See [GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
+Create a class and an interface with a getter/setter for a String version property.  
+
+[GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
 
 
 ## Create the GAR life cycle listener

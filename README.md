@@ -8,6 +8,7 @@ Create a class and an inerface with a version getter/setter. see [GARVersion.jav
 
 ## Create the GAR life cycle listener
 
+[LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)
 
 
 ## Declare the listener in coherence-application.xml

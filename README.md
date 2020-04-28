@@ -3,7 +3,7 @@ This project describes the different parts required to expose the verison of a G
 
 ## Create the custom MBean
 
-Create a class and an inerface with a version getter/setter. see https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java
+Create a class and an inerface with a version getter/setter. see https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java and https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java
 
 ## Create the GAR life cycle listener
 

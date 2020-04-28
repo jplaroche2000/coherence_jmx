@@ -6,7 +6,7 @@ This project describes the different parts required to expose the version of a G
 Create a class and an interface with a getter/setter for a String version property.  
 These classes need to be deployed in a jar in the lib folder of the GAR.
 
-[GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
+Se  [GARVersion.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersion.java) and [GARVersionMBean.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/GARVersionMBean.java)
 
 
 ## Create the GAR life cycle listener
@@ -16,7 +16,7 @@ These classes need to be deployed in a jar in the lib folder of the GAR.
 
 This class needs to be deployed in a jar in the lib folder of the GAR.
 
-[LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)
+See [LifeCycleListener.java](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/java/ca/kafeine/coherence/listener/LifeCycleListener.java)
 
 
 ## Declare the listener in coherence-application.xml of the GAR project

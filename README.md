@@ -16,10 +16,11 @@ Create a class and an interface with a getter/setter for a String version proper
 
 ## Declare the listener in coherence-application.xml
 
+```
   <application-lifecycle-listener>
         <class-name>ca.kafeine.coherence.listener.LifeCycleListener</class-name>
   </application-lifecycle-listener>
-
+```
 See 
 [coherence-application.xml](https://github.com/jplaroche2000/coherence_jmx/blob/master/src/main/resources/META-INF/coherence-application.xml)
 
